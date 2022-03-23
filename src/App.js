@@ -30,12 +30,13 @@ const theme = {
 const globalStyles = {
     body: {
         margin: 0,
+        boxSizing: 'border-box',
         fontFamily:
-            "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+            "'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
     },
 }
 
-function App() {
+const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <Global styles={globalStyles} />

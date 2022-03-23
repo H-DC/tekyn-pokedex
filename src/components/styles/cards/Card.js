@@ -5,7 +5,7 @@ export const Card = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: ${({ padding }) => padding};
     border-radius: 2rem;
     min-width: ${({ minWidth }) => minWidth};
     background-color: ${({ transparent }) =>

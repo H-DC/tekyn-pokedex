@@ -7,21 +7,29 @@ import { TextButton } from '../../components/styles/buttons/TextButton'
 import { SearchForm } from '../../components/styles/forms/SearchForm'
 import { FaRandom } from 'react-icons/fa'
 import pokeballSrc from '../../assets/images/pokeball.png'
+import { Link } from 'react-router-dom'
+import { useInput } from '../../hooks/useInput'
 
 export const SearchPage = () => {
+    let { bind: searchInput } = useInput('')
+
     return (
         <DefaultLayout>
-            <Card transparent minWidth="11rem">
+            <Card transparent minWidth="11rem" padding="2rem">
                 <img src={pokeballSrc} alt="pokeball" />
                 <SearchForm>
                     <h6>Pokemon name or ID</h6>
-                    <input />
+                    <input {...searchInput} />
                 </SearchForm>
                 <Flex justify="space-between">
-                    <TextButton>Search !</TextButton>
-                    <FabButton>
-                        <FaRandom />
-                    </FabButton>
+                    <Link to={`/${searchInput.value}`}>
+                        <TextButton>Search !</TextButton>
+                    </Link>
+                    <Link to="/random">
+                        <FabButton>
+                            <FaRandom />
+                        </FabButton>
+                    </Link>
                 </Flex>
             </Card>
         </DefaultLayout>

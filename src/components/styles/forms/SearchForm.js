@@ -11,6 +11,7 @@ export const SearchForm = styled.div`
     }
     & > input {
         width: 100%;
+        padding: 0;
         border: none;
         border-radius: 4px;
     }

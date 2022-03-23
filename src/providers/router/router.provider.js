@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import PokemonPage from '../../pages/PokemonPage/PokemonPage'
 import SearchPage from '../../pages/SearchPage/SearchPage'
 
 export default function RouterProvider() {
@@ -7,6 +8,7 @@ export default function RouterProvider() {
         <Router>
             <Routes>
                 <Route path="/" element={<SearchPage />} />
+                <Route path="/:id" element={<PokemonPage />} />
             </Routes>
         </Router>
     )
