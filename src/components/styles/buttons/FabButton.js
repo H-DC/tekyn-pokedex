@@ -1,6 +1,9 @@
 import styled from '@emotion/styled'
 
 export const FabButton = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3rem;
     height: 3rem;
     color: white;

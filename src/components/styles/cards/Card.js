@@ -7,6 +7,7 @@ export const Card = styled.div`
     align-items: center;
     padding: 2rem;
     border-radius: 2rem;
+    min-width: ${({ minWidth }) => minWidth};
     background-color: ${({ transparent }) =>
         transparent ? 'rgba(255, 255, 255, 0.8)' : '#fff'};
     border: ${({ bordered }) => (bordered ? '1px solid #DEDEDE' : 'none')};
