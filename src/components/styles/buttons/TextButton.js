@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 export const TextButton = styled.button`
     padding: 0rem 2rem;
@@ -7,4 +7,4 @@ export const TextButton = styled.button`
     border: none;
     border-radius: 3rem;
     background-color: ${({ theme }) => theme.colors.primary || '#f4a261'};
-`;
+`

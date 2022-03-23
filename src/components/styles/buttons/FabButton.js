@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 export const FabButton = styled.button`
     width: 3rem;
@@ -7,4 +7,4 @@ export const FabButton = styled.button`
     border: none;
     border-radius: 50%;
     background-color: ${({ theme }) => theme.colors.primary || '#f4a261'};
-`;
+`

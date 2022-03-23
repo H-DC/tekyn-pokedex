@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 export const DefaultLayout = styled.div`
     height: 100vh;
@@ -7,5 +7,8 @@ export const DefaultLayout = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: ${({ theme }) => `linear-gradient(${theme.colors.primary || '#f4a261'}, ${theme.colors.secondary || '#141a2b'})`};
-`;
+    background: ${({ theme }) =>
+        `linear-gradient(${theme.colors.primary || '#f4a261'}, ${
+            theme.colors.secondary || '#141a2b'
+        })`};
+`
