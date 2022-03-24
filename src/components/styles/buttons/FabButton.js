@@ -10,4 +10,9 @@ export const FabButton = styled.button`
     border: none;
     border-radius: 50%;
     background-color: ${({ theme }) => theme.colors.primary || '#f4a261'};
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
 `

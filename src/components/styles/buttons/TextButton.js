@@ -7,4 +7,9 @@ export const TextButton = styled.button`
     border: none;
     border-radius: 3rem;
     background-color: ${({ theme }) => theme.colors.primary || '#f4a261'};
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
 `
