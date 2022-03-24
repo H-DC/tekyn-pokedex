@@ -7,6 +7,7 @@ export const DefaultLayout = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5rem;
     background: ${({ theme }) =>
         `linear-gradient(${theme.colors.primary || '#f4a261'}, ${
             theme.colors.secondary || '#141a2b'
