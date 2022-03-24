@@ -8,7 +8,8 @@ export default function RouterProvider() {
         <Router>
             <Routes>
                 <Route path="/" element={<SearchPage />} />
-                <Route path="/:id" element={<PokemonPage />} />
+                <Route path="/pokemon" element={<PokemonPage />} />
+                <Route path="/pokemon/:id" element={<PokemonPage />} />
             </Routes>
         </Router>
     )

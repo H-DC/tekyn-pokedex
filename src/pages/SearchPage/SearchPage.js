@@ -22,10 +22,10 @@ export const SearchPage = () => {
                     <input {...searchInput} />
                 </SearchForm>
                 <Flex justify="space-between">
-                    <Link to={`/${searchInput.value}`}>
+                    <Link to={`/pokemon/${searchInput.value}`}>
                         <TextButton>Search !</TextButton>
                     </Link>
-                    <Link to="/random">
+                    <Link to="/pokemon">
                         <FabButton>
                             <FaRandom />
                         </FabButton>
