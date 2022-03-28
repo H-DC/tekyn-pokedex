@@ -9,10 +9,6 @@ export const NavBar = styled.div`
     justify-content: center;
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
 
-    & h1 {
-        margin: 0;
-    }
-
     & > .navbar__logo {
         position: absolute;
         display: flex;

@@ -13,11 +13,13 @@ import { EMPTY_POKEMON } from '../../constants/models'
 import StatsTable from './StatsTable.component'
 import { AnimatedPokeball } from '../../components/styles/loadings/AnimatedPokeball'
 import EvolutionPath from './EvolutionPath.component'
+import { NameTitle } from '../../components/styles/titles/NameTitle'
+import { capitalized } from '../../helpers.js/helpers'
 
 export const PokemonPage = () => {
     let { id } = useParams()
     const [pokemon, setPokemon] = useState(EMPTY_POKEMON)
-    const [status, setStatus] = useState('loading')
+    const [isLoaded, setIsLoaded] = useState(false)
 
     useEffect(() => {
         fetchPokemon()
@@ -38,16 +40,15 @@ export const PokemonPage = () => {
         }
         if (pokemon) {
             setPokemon(pokemon)
-            setStatus('loaded')
+            setIsLoaded(true)
         }
     }
 
     let { name, id: pokemonId } = pokemon
-    let capitalizedName = name[0].toUpperCase() + name.substring(1)
 
     return (
         <DefaultLayout>
-            {status === 'loaded' ? (
+            {isLoaded === true ? (
                 <Card transparent>
                     <NavBar>
                         <div className="navbar__logo">
@@ -55,9 +56,9 @@ export const PokemonPage = () => {
                                 <FaChevronLeft size="2rem" color="black" />
                             </Link>
                         </div>
-                        <h1>
-                            {capitalizedName} #{pokemonId}
-                        </h1>
+                        <NameTitle>
+                            {capitalized(name)} #{pokemonId}
+                        </NameTitle>
                     </NavBar>
                     <Flex justify="space-between" padding="2rem">
                         <StatsTable pokemon={pokemon} />
