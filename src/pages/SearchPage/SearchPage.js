@@ -26,7 +26,9 @@ export const SearchPage = () => {
                         <TextButton>Search !</TextButton>
                     </Link>
                     <Link to="/pokemon">
-                        <FabButton margin="0 0 0 1rem">
+                        <FabButton
+                            margin="0 0 0 1rem"
+                            data-testid="random-button">
                             <FaRandom />
                         </FabButton>
                     </Link>
