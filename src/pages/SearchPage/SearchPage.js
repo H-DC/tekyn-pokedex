@@ -15,7 +15,7 @@ export const SearchPage = () => {
 
     return (
         <DefaultLayout>
-            <Card transparent minWidth="11rem" padding="2rem">
+            <Card transparent padding="2rem">
                 <img src={pokeballSrc} alt="pokeball" />
                 <SearchForm>
                     <h6>Pokemon name or ID</h6>
@@ -26,7 +26,7 @@ export const SearchPage = () => {
                         <TextButton>Search !</TextButton>
                     </Link>
                     <Link to="/pokemon">
-                        <FabButton>
+                        <FabButton margin="0 0 0 1rem">
                             <FaRandom />
                         </FabButton>
                     </Link>

@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 
 export const AnimatedPokeball = styled.div`
     position: relative;
+    margin: 5rem;
     width: 100px;
     height: 100px;
     opacity: 0.5;
@@ -18,6 +19,18 @@ export const AnimatedPokeball = styled.div`
     animation-duration: 900ms;
     animation-name: shake;
     animation-iteration-count: infinite;
+
+    &::after {
+        content: '';
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        border: 4px solid black;
+        border-radius: 50%;
+        top: 26px;
+        left: 26px;
+    }
 
     @keyframes shake {
         0% {
