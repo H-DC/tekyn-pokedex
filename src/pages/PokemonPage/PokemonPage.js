@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { MAX_POKEMON_COUNT, POKEMON_API } from '../../constants/variables'
+import { EMPTY_POKEMON } from '../../constants/models'
+import { capitalized } from '../../helpers.js/helpers'
+import { get } from '../../services/api.service'
 import { Flex } from '../../components/styles/common/Flex'
 import { DefaultLayout } from '../../components/styles/layouts/DefaultLayout'
 import { Card } from '../../components/styles/cards/Card'
 import { NavBar } from '../../components/styles/navs/NavBar'
-import { FaChevronLeft } from 'react-icons/fa'
-import { get } from '../../services/api.service'
-import { MAX_POKEMON_COUNT, POKEMON_API } from '../../constants/variables'
-import InfoCard from './InfoCard.component'
-import Avatar from './Avatar.component'
-import { EMPTY_POKEMON } from '../../constants/models'
-import StatsTable from './StatsTable.component'
 import { AnimatedPokeball } from '../../components/styles/loadings/AnimatedPokeball'
-import EvolutionPath from './EvolutionPath.component'
 import { NameTitle } from '../../components/styles/titles/NameTitle'
-import { capitalized } from '../../helpers.js/helpers'
+import { FaChevronLeft } from 'react-icons/fa'
+import InfoCard from './InfoCard/InfoCard.component'
+import Avatar from './Avatar/Avatar.component'
+import StatsTable from './StatsTable/StatsTable.component'
+import EvolutionPath from './EvolutionPath/EvolutionPath.component'
 
 export const PokemonPage = () => {
     let { id } = useParams()
@@ -51,9 +51,13 @@ export const PokemonPage = () => {
             {isLoaded === true ? (
                 <Card transparent>
                     <NavBar>
-                        <div className="navbar__logo">
+                        <div className="navbar__action">
                             <Link to="/">
-                                <FaChevronLeft size="2rem" color="black" />
+                                <FaChevronLeft
+                                    size="2rem"
+                                    color="black"
+                                    data-testid="back-button"
+                                />
                             </Link>
                         </div>
                         <NameTitle>

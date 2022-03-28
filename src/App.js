@@ -1,7 +1,7 @@
 import { Global, ThemeProvider } from '@emotion/react'
 import RouterProvider from './providers/router/router.provider'
 
-const theme = {
+export const theme = {
     colors: {
         primary: '#f4a261',
         secondary: '#141a2b',

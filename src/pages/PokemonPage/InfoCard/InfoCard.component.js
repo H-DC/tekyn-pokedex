@@ -1,6 +1,6 @@
 import React from 'react'
-import { Flex } from '../../components/styles/common/Flex'
-import { Card } from '../../components/styles/cards/Card'
+import { Flex } from '../../../components/styles/common/Flex'
+import { Card } from '../../../components/styles/cards/Card'
 
 export const InfoCard = ({ pokemon }) => {
     let { weight, height, abilities } = pokemon
@@ -10,7 +10,12 @@ export const InfoCard = ({ pokemon }) => {
     })
 
     return (
-        <Card bordered elevated width="30%" padding="1rem">
+        <Card
+            bordered
+            elevated
+            width="30%"
+            padding="1rem"
+            data-testid="info-card">
             <Flex justify="space-between" margin="1rem">
                 <strong>Weight</strong>
                 <span className="text--info">{weight} kg</span>

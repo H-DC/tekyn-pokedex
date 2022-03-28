@@ -9,7 +9,7 @@ export const NavBar = styled.div`
     justify-content: center;
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
 
-    & > .navbar__logo {
+    & > .navbar__action {
         position: absolute;
         display: flex;
         align-items: center;

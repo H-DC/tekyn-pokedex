@@ -1,6 +1,6 @@
 import React from 'react'
-import { StatTable } from '../../components/styles/tables/StatTable'
-import { StatTd } from '../../components/styles/tables/StatTd'
+import { StatTable } from '../../../components/styles/tables/StatTable'
+import { StatTd } from '../../../components/styles/tables/StatTd'
 
 export const StatsTable = ({ pokemon }) => {
     let { stats } = pokemon
@@ -26,7 +26,7 @@ export const StatsTable = ({ pokemon }) => {
     ))
 
     return (
-        <StatTable backgroundColor="#C4C4C4">
+        <StatTable backgroundColor="#C4C4C4" data-testid="stat-table">
             <tbody>{statTableJSX}</tbody>
         </StatTable>
     )

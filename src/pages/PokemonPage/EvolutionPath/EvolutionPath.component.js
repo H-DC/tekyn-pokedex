@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { POKEMON_API, SPECIES_URL } from '../../constants/variables'
-import { get } from '../../services/api.service'
-import { capitalized } from '../../helpers.js/helpers'
-import evoChevronSrc from '../../assets/images/evoChevron.svg'
-import { Flex } from '../../components/styles/common/Flex'
-import { NameTitle } from '../../components/styles/titles/NameTitle'
-import { AnimatedPokeball } from '../../components/styles/loadings/AnimatedPokeball'
+import { POKEMON_API, SPECIES_URL } from '../../../constants/variables'
+import { get } from '../../../services/api.service'
+import { capitalized } from '../../../helpers.js/helpers'
+import evoChevronSrc from '../../../assets/images/evoChevron.svg'
+import { Flex } from '../../../components/styles/common/Flex'
+import { NameTitle } from '../../../components/styles/titles/NameTitle'
+import { AnimatedPokeball } from '../../../components/styles/loadings/AnimatedPokeball'
 
 export const EvolutionPath = ({ pokemon }) => {
     let { id } = pokemon
@@ -70,7 +70,7 @@ export const EvolutionPath = ({ pokemon }) => {
     )
 
     return (
-        <Flex justify="center">
+        <Flex justify="center" data-testid="evolution-path">
             {isLoaded ? (
                 pokemonsChain.map((pokemon, i) => {
                     return [
